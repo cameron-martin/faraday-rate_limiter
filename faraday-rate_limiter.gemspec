@@ -1,11 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'faraday/rate_limiter'
 
 Gem::Specification.new do |spec|
   spec.name          = 'faraday-rate_limiter'
-  spec.version       = Faraday::RateLimiter::VERSION
+  spec.version       = '0.0.1'
   spec.authors       = ['Cameron Martin']
   spec.email         = ['cameronmartin123@gmail.com']
   spec.description   = %q{Limits the rate of faraday requests}
