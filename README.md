@@ -1,6 +1,6 @@
 # Faraday::RateLimiter
 
-TODO: Write a gem description
+Faraday middleware to limit the rate of requests
 
 ## Installation
 
@@ -18,7 +18,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    require 'faraday-rate_limiter'
+
+    Faraday.new do |conn|
+      conn.request :rate_limiter, interval: 5 # Defaults to 1 second
+      conn.adapter :net_http
+    end
 
 ## Contributing
 

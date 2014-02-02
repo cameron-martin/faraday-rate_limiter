@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.version       = '0.0.3'
   spec.authors       = ['Cameron Martin']
   spec.email         = ['cameronmartin123@gmail.com']
-  spec.description   = %q{Limits the rate of faraday requests}
-  spec.summary       = %q{Limits the rate of faraday requests}
+  spec.description   = %q{Faraday middleware to limit rate of requests}
+  spec.summary       = spec.description
   spec.homepage      = ''
   spec.license       = 'MIT'
 
