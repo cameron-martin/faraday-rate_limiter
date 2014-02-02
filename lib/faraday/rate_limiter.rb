@@ -8,7 +8,6 @@ module Faraday
 
     def call(env)
 
-
       if @last_request_time
         time_since_last_request = Time.now - @last_request_time
         if time_since_last_request < @interval

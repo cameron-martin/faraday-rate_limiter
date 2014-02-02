@@ -15,19 +15,29 @@ describe Faraday::RateLimiter do
     end
   end
 
-  it 'should return the first result without delay' do
+  it 'returns the first result without delay' do
     t1 = Time.now
     conn.get('/index')
     t2 = Time.now
     expect((t2 - t1).abs < interval).to be_true
   end
 
-  it 'should wait between requests' do
+  it 'waits between requests' do
     t1 = Time.now
     conn.get('/index')
     conn.get('/index')
     t2 = Time.now
     expect((t2 - t1).abs > interval).to be_true
+    expect((t2 - t1).abs < interval*2).to be_true
   end
+
+  it 'waits for correct time with long requests' do
+    t1 = Time.now
+    conn.get('/index')
+    sleep(5)
+    conn.get('/index')
+    t2 = Time.now
+    expect((t2 - t1).abs > interval).to be_true
+    expect((t2 - t1).abs < interval*2).to be_true  end
 
 end
