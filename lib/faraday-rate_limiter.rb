@@ -1,0 +1,1 @@
+require 'faraday/rate_limiter'

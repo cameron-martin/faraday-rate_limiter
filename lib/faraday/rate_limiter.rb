@@ -1,7 +1,8 @@
-require 'faraday/rate_limiter/version'
-
 module Faraday
   class RateLimiter < Faraday::Middleware
+
+    VERSION = '0.0.1'
+
     def initialize(app, options={})
       super(app)
       @interval = options.fetch(:interval, 1)
