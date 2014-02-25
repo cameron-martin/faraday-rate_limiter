@@ -19,7 +19,7 @@ describe Faraday::RateLimiter do
     t1 = Time.now
     conn.get('/index')
     t2 = Time.now
-    expect((t2 - t1).abs < interval).to be_true
+    expect(t2 - t1).to be_within(0.1).of(0)
   end
 
   it 'waits between requests' do
@@ -27,8 +27,7 @@ describe Faraday::RateLimiter do
     conn.get('/index')
     conn.get('/index')
     t2 = Time.now
-    expect((t2 - t1).abs > interval).to be_true
-    expect((t2 - t1).abs < interval*2).to be_true
+    expect(t2 - t1).to be_within(0.1).of(interval)
   end
 
   it 'waits for correct time with long requests' do
@@ -37,7 +36,7 @@ describe Faraday::RateLimiter do
     sleep(5)
     conn.get('/index')
     t2 = Time.now
-    expect((t2 - t1).abs > interval).to be_true
-    expect((t2 - t1).abs < interval*2).to be_true  end
+    expect(t2 - t1).to be_within(0.1).of(interval)
+  end
 
 end
