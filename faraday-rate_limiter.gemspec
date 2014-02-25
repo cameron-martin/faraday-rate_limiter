@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['cameronmartin123@gmail.com']
   spec.description   = %q{Faraday middleware to limit rate of requests}
   spec.summary       = spec.description
-  spec.homepage      = ''
+  spec.homepage      = 'https://github.com/cameron-martin/faraday-rate_limiter'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
