@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/cameron-martin/faraday-rate_limiter.png?branch=master)](https://travis-ci.org/cameron-martin/faraday-rate_limiter)
+
 # Faraday::RateLimiter
 
 Faraday middleware to limit the rate of requests
