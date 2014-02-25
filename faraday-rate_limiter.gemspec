@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'faraday-rate_limiter'
-  spec.version       = '0.0.3'
+  spec.version       = '0.0.4'
   spec.authors       = ['Cameron Martin']
   spec.email         = ['cameronmartin123@gmail.com']
   spec.description   = %q{Faraday middleware to limit rate of requests}
