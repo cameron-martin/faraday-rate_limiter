@@ -8,7 +8,7 @@ describe Faraday::RateLimiter do
   let(:interval) { 5 }
   let(:conn) do
     Faraday.new do |conn|
-      conn.request :rate_limiter, interval: interval
+      conn.request :rate_limiter, :interval => interval
       conn.adapter :test do |stub|
         stub.get('/index') {[ 200, {}, '' ]}
       end
