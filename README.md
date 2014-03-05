@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/cameron-martin/faraday-rate_limiter.png?branch=master)](https://travis-ci.org/cameron-martin/faraday-rate_limiter)
 [![Code Climate](https://codeclimate.com/github/cameron-martin/faraday-rate_limiter.png)](https://codeclimate.com/github/cameron-martin/faraday-rate_limiter)
+[![Coverage Status](https://coveralls.io/repos/cameron-martin/faraday-rate_limiter/badge.png)](https://coveralls.io/r/cameron-martin/faraday-rate_limiter)
 
 # Faraday::RateLimiter
 
