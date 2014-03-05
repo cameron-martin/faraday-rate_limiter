@@ -1,4 +1,4 @@
-require 'rspec'
+require 'spec_helper'
 
 require 'faraday'
 require 'faraday-rate_limiter'
