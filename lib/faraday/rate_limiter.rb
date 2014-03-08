@@ -9,9 +9,9 @@ module Faraday
     def call(env)
 
       if @last_request_time
-        time_since_last_request = Time.now - @last_request_time
-        if time_since_last_request < @interval
-          sleep(@interval-time_since_last_request)
+        seconds_since_last_request = Time.now - @last_request_time
+        if seconds_since_last_request < @interval
+          sleep(@interval-seconds_since_last_request)
         end
       end
 
